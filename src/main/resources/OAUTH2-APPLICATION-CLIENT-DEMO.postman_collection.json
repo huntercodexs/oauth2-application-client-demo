@@ -1,0 +1,559 @@
+{
+	"info": {
+		"_postman_id": "d60fc241-7479-4b07-ac3c-59b0aeb8b336",
+		"name": "OAUTH2-APPLICATION-CLIENT-DEMO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19022303"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Admin",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "1234567890",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "610d99c8-b53b-4b02-9a67-17ce34e3bb1f",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:33010/huntercodexs/application/api/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "33010",
+							"path": [
+								"huntercodexs",
+								"application",
+								"api",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "tokenType",
+									"value": "bearer",
+									"type": "string"
+								},
+								{
+									"key": "accessToken",
+									"value": "4d311351-9acd-48f2-afb7-7fc81f0ccd54",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "OAUTH2DEMO_USER",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "1234567890",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "http://localhost:33000/api/rest/oauth/v1/oauth/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "huntercodexs",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "cbfcc74b-07cd-4abb-906b-abddd8fa1bec",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "client_id",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:33009/huntercodexs/application/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "33009",
+							"path": [
+								"huntercodexs",
+								"application",
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Others",
+			"item": [
+				{
+					"name": "Others",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:33009/huntercodexs/application/api/others",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "33009",
+							"path": [
+								"huntercodexs",
+								"application",
+								"api",
+								"others"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Draft",
+			"item": [
+				{
+					"name": "Get Token",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "cbfcc74b-07cd-4abb-906b-abddd8fa1bec",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "client_id",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "OAUTH2DEMO_USER",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234567890",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:33000/api/rest/oauth/v1/oauth/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "33000",
+							"path": [
+								"api",
+								"rest",
+								"oauth",
+								"v1",
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Token",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "grant_type",
+											"value": "password",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "OAUTH2DEMO_USER",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "1234567890",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:33000/api/rest/oauth/v1/oauth/token",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "33000",
+									"path": [
+										"api",
+										"rest",
+										"oauth",
+										"v1",
+										"oauth",
+										"token"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST, GET, PUT, OPTIONS, DELETE"
+								},
+								{
+									"key": "Access-Control-Max-Age",
+									"value": "3600"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "x-requested-with, authorization, Content-Type, Authorization, credential, X-XSRF-TOKEN"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "JSESSIONID=B7CFFB7BA1C52DE2B2738696BA184AE7; Path=/; HttpOnly"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Oct 2022 15:01:49 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"access_token\": \"003df118-4131-4619-8586-c55d1c7e3f64\",\n    \"token_type\": \"bearer\",\n    \"refresh_token\": \"f830814d-cd1b-4d4b-8cdd-8e08b637fea1\",\n    \"expires_in\": 2241,\n    \"scope\": \"read write\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Check Token",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic Y2xpZW50X2lkOmNiZmNjNzRiLTA3Y2QtNGFiYi05MDZiLWFiZGRkOGZhMWJlYw==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "token",
+									"value": "003df118-4131-4619-8586-c55d1c7e3f64",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:33000/api/rest/oauth/v1/oauth/check_token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "33000",
+							"path": [
+								"api",
+								"rest",
+								"oauth",
+								"v1",
+								"oauth",
+								"check_token"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Check Token",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic Y2xpZW50X2lkOmNiZmNjNzRiLTA3Y2QtNGFiYi05MDZiLWFiZGRkOGZhMWJlYw==",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "token",
+											"value": "003df118-4131-4619-8586-c55d1c7e3f64",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:33000/api/rest/oauth/v1/oauth/check_token",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "33000",
+									"path": [
+										"api",
+										"rest",
+										"oauth",
+										"v1",
+										"oauth",
+										"check_token"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST, GET, PUT, OPTIONS, DELETE"
+								},
+								{
+									"key": "Access-Control-Max-Age",
+									"value": "3600"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "x-requested-with, authorization, Content-Type, Authorization, credential, X-XSRF-TOKEN"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "JSESSIONID=3A0BF108DBA2235485FFB86D2174FED5; Path=/; HttpOnly"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Oct 2022 15:03:20 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"aud\": [\n        \"oauth2-resource\"\n    ],\n    \"user_name\": \"OAUTH2DEMO_USER\",\n    \"scope\": [\n        \"read\",\n        \"write\"\n    ],\n    \"active\": true,\n    \"exp\": 1665157150,\n    \"authorities\": [\n        \"ROLE_USER\"\n    ],\n    \"client_id\": \"client_id\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Get Token",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "1234567890",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:33010/huntercodexs/application/api/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33010",
+					"path": [
+						"huntercodexs",
+						"application",
+						"api",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
