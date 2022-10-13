@@ -23,7 +23,7 @@ public class OperatorEntity {
     public String authority;
 
     @Column
-    public String authorization;
+    public String authorize;
 
     @Column
     public String username;

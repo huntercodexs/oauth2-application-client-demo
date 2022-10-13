@@ -1,2 +1,4 @@
-# oauth2-application-client-demo
-Sample OAuth2 Applicaton
+
+# OAuth2 Application Client Demo
+
+Sample OAuth2 Application

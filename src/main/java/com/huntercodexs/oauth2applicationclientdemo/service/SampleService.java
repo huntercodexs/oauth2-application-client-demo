@@ -27,7 +27,7 @@ public class SampleService {
         String password = operator.getPassword();
         String grant_type = operator.getGrantType();
         String urlToken = operator.getUrlGetToken();
-        String basic_auth = operator.getAuthorization();
+        String basic_auth = operator.getAuthorize();
         String credentials = "?username="+username+"&password="+password+"&grant_type="+grant_type;
 
         JSONObject response = sampleClient.getToken(urlToken, credentials, basic_auth).getBody();
@@ -48,7 +48,7 @@ public class SampleService {
 
         String token = operator.getToken();
         String urlCheckToken = operator.getUrlCheckToken();
-        String basic_auth = operator.getAuthorization();
+        String basic_auth = operator.getAuthorize();
         String body = "?token="+token;
 
         JSONObject response = sampleClient.checkToken(token, urlCheckToken, basic_auth, body).getBody();

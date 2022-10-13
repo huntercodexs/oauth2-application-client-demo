@@ -19,15 +19,15 @@
 -- Table structure for table `oauth2_application_client_operator`
 --
 
-# LOCK TABLES `oauth2_application_client_operator` WRITE;
+-- LOCK TABLES `oauth2_application_client_operator` WRITE;
 DROP TABLE IF EXISTS `oauth2_application_client_operator`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `oauth2_application_client_operator` (
   `id` bigint NOT NULL AUTO_INCREMENT,
-  `accessCode` varchar(255) DEFAULT NULL,
+  `accessCode` varchar(255) NOT NULL,
   `authority` varchar(255) DEFAULT NULL,
-  `authorization` varchar(255) DEFAULT NULL,
+  `authorize` varchar(255) DEFAULT NULL,
   `username` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
   `grantType` varchar(255) DEFAULT NULL,
@@ -50,7 +50,9 @@ CREATE TABLE `oauth2_application_client_operator` (
 LOCK TABLES `oauth2_application_client_operator` WRITE;
 /*!40000 ALTER TABLE `oauth2_application_client_operator` DISABLE KEYS */;
 INSERT INTO `oauth2_application_client_operator` VALUES
-(1,'1234567890','OAUTH2-SERVER-DEMO','Y2xpZW50X2lkOmNiZmNjNzRiLTA3Y2QtNGFiYi05MDZiLWFiZGRkOGZhMWJlYw==','OAUTH2DEMO_USER','1234567890','password','client_id','Y2JmY2M3NGItMDdjZC00YWJiLTkwNmItYWJkZGQ4ZmExYmVj','ROLE_USER','user@email.com',1,null,'http://localhost:33000/api/rest/oauth/v1/oauth/token','http://localhost:33000/api/rest/oauth/v1/oauth/check_token');
+(1,'1234567890','OAUTH2-SERVER-DEMO','Y2xpZW50X2lkOmNiZmNjNzRiLTA3Y2QtNGFiYi05MDZiLWFiZGRkOGZhMWJlYw==','OAUTH2DEMO_ADMIN','1234567890','password','client_id','Y2JmY2M3NGItMDdjZC00YWJiLTkwNmItYWJkZGQ4ZmExYmVj','ROLE_ADMIN','admin@email.com',1,null,'http://localhost:33100/huntercodexs/server/api/rest/oauth/v1/oauth/token','http://localhost:33100/huntercodexs/server/api/rest/oauth/v1/oauth/check_token'),
+(2,'1234567899','OAUTH2-SERVER-DEMO','Y2xpZW50X2lkOmNiZmNjNzRiLTA3Y2QtNGFiYi05MDZiLWFiZGRkOGZhMWJlYw==','OAUTH2DEMO_USER','1234567890','password','client_id','Y2JmY2M3NGItMDdjZC00YWJiLTkwNmItYWJkZGQ4ZmExYmVj','ROLE_USER','user@email.com',1,null,'http://localhost:33100/huntercodexs/server/api/rest/oauth/v1/oauth/token','http://localhost:33100/huntercodexs/server/api/rest/oauth/v1/oauth/check_token'),
+(3,'9234567899','OAUTH2-SERVER-DEMO','YXdzOmNiZmM1NjU0LTMzMzMtNGFiYi05OTk5LWFiZGRkOGZhMWJlYw==','OAUTH2DEMO_CLIENT','1234567890','password','aws','Y2JmYzU2NTQtMzMzMy00YWJiLTk5OTktYWJkZGQ4ZmExYmVj','ROLE_CLIENT','client@email.com',1,null,'http://localhost:33100/huntercodexs/server/api/rest/oauth/v1/oauth/token','http://localhost:33100/huntercodexs/server/api/rest/oauth/v1/oauth/check_token');
 /*!40000 ALTER TABLE `oauth2_application_client_operator` ENABLE KEYS */;
 UNLOCK TABLES;
 
